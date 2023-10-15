@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: 5rem 5rem 1fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar header"
+    "sidebar main-content";
+}
+
+.header {
+    background-color: red;
+
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: green;
+
+    grid-area: sidebar;
+
+    display: grid;
+    grid-template-columns: 4rem 11rem;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas: 
+    "logo logo-text"
+    "svg name";
+}
+
+.main-content {
+    background-color: blue;
+    
+    grid-area: main-content;
+}
