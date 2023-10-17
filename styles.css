@@ -20,6 +20,105 @@ body {
     background-color: red;
 
     grid-area: header;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.searchbar-container {
+    padding:  0 2rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.searchbar {
+    width: 75%;
+    height: 2rem;
+    border: none;
+    border-radius: 10rem;
+}
+
+.account-info {
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.account-pic {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    border: 1px solid black;
+    border-radius: 10rem;
+}
+
+.header-bottom {
+    padding: 0 2rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-img-placeholder {
+    height: 4rem;
+    width: 4rem;
+
+    border: 1px solid black;
+    border-radius: 10rem;
+}   
+
+.welcome-message {
+    font-size: 1rem;
+}
+
+.welcome-message > .welcome-username {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-buttons > .header-button-1,
+.header-buttons > .header-button-2,
+.header-buttons > .header-button-3 {
+    height: 2.5rem;
+    width: 6rem;
+
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10rem;
+
+    background-color: aqua;
 }
 
 
@@ -34,8 +133,7 @@ body {
     grid-template-rows: 5rem 1fr;
     grid-template-areas: 
     "side-logo"
-    "side-content"
-    ;
+    "side-content";
 }
 
 .sidebar-logo {
@@ -85,14 +183,167 @@ body {
     width: 1.2rem;
 }
 
-.sidebar-link {
-    
-}
-
 
 /* ----- Content Styles ----- */
+
 .main-content {
     background-color: blue;
     
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+    gap: 1rem;
+}
+
+.content-heading-projects {
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 0;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.content-heading-announcements {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 0;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.content-heading-trending {
+    margin: 0;
+    padding-bottom: 0;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.project-cards {
+    height: 80%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "c1 c2"
+    "c3 c4"
+    "c5 c6";
+    gap: 1rem;
+}
+
+.projects-c1 {
+    grid-area: c1;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.projects-c2 {
+    grid-area: c2;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.projects-c3 {
+    grid-area: c3;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.projects-c4 {
+    grid-area: c4;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.projects-c5 {
+    grid-area: c5;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.projects-c6 {
+    grid-area: c6;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.announcements {
+    grid-area: announcements;
+}
+
+.announcement-content {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid pink;
+    border-radius: 10px;
+
+    background-color: white;
+    align-items: center;
+}
+
+.hr-announcement{
+    height: 1.5px;
+    width: 90%; 
+
+    border: none;
+    border-radius: 5rem;
+    background-color: rgb(199, 199, 199);
+}
+
+.announcement-1,
+.announcement-2,
+.announcement-3 {
+    width: 80%;
+    font-size: 0.7rem;
+    color: rgb(77, 76, 76);
+}
+
+
+.announcement-1 > .announcement-heading,
+.announcement-2 > .announcement-heading,
+.announcement-3 > .announcement-heading{
+    font-size: 0.9rem; 
+    font-weight: bolder;
+    color: black;
+
+}
+
+
+.trending {
+    grid-area: trending;
+}
+
+.trending-content {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    border: 1px solid pink;
+    border-radius: 10px;
+    
+    font-size: 0.8rem;
 }
