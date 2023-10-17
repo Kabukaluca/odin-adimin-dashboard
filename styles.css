@@ -325,7 +325,6 @@ body {
     font-size: 0.9rem; 
     font-weight: bolder;
     color: black;
-
 }
 
 
@@ -346,4 +345,29 @@ body {
     border-radius: 10px;
     
     font-size: 0.8rem;
+}
+
+.trending-1,
+.trending-2,
+.trending-3,
+.trending-4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.trending-account-pic {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    border: 1px solid black;
+    border-radius: 10rem;
+}
+
+.trending-account-info > .trending-account-name {
+    font-weight: bold;
+}
+
+.trending-account-info > .trending-account-bio {
+    color: rgb(77, 76, 76);
 }
