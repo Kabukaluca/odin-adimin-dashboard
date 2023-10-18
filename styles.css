@@ -1,3 +1,18 @@
+:root {
+    /* ===== Colors ===== */
+    --body-color: #eef2ff;
+    --content-color: white;
+    --sidebar-color: #3b82f6;
+    --header-color: white;
+    --primary-color: #3b82f6;
+    --secondary-color: #312e81;
+    --text-color: rgb(77, 76, 76);
+    --hr-color: rgb(199, 199, 199);
+
+    --white-color: white;
+    --black-color: black;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -17,7 +32,7 @@ body {
 
 /* ----- Header Styles ----- */
 .header {
-    background-color: red;
+    background-color: var(--header-color);
 
     grid-area: header;
 
@@ -52,6 +67,7 @@ body {
     height: 2rem;
     border: none;
     border-radius: 10rem;
+    background-color: var(--body-color);
 }
 
 .account-info {
@@ -59,14 +75,13 @@ body {
 
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .account-pic {
     height: 2.5rem;
     width: 2.5rem;
 
-    border: 1px solid black;
     border-radius: 10rem;
 }
 
@@ -85,10 +100,9 @@ body {
 }
 
 .welcome-img-placeholder {
-    height: 4rem;
-    width: 4rem;
+    height: 4.5rem;
+    width: 4.5rem;
 
-    border: 1px solid black;
     border-radius: 10rem;
 }   
 
@@ -118,13 +132,14 @@ body {
     border: none;
     border-radius: 10rem;
 
-    background-color: aqua;
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
 
 
 /* ----- Sidebar Styles ----- */
 .sidebar {
-    background-color: green;
+    background-color: var(--sidebar-color);
 
     grid-area: sidebar;
 
@@ -144,7 +159,7 @@ body {
     font-weight: bold;
     letter-spacing: 0.2rem;
 
-    color: white;
+    color: var(--white-color);
 
     display: flex;
     justify-content: center;
@@ -170,7 +185,7 @@ body {
 }
 
 .sidebar-link-container {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
 
     display: flex;
@@ -187,7 +202,7 @@ body {
 /* ----- Content Styles ----- */
 
 .main-content {
-    background-color: blue;
+    background-color: var(--body-color);
     
     grid-area: main-content;
     display: grid;
@@ -246,38 +261,96 @@ body {
     grid-area: c1;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    background-color: var(--content-color);
+    gap: 0.2rem;
 
+    display: flex;
+    flex-direction: column;
 }
 .projects-c2 {
     grid-area: c2;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    background-color: var(--content-color);
+    gap: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
 }
 .projects-c3 {
     grid-area: c3;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    background-color: var(--content-color);
+    gap: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
 }
 .projects-c4 {
     grid-area: c4;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    background-color: var(--content-color);
+    gap: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
 }
 .projects-c5 {
     grid-area: c5;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    background-color: var(--content-color);
+    gap: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
 }
 .projects-c6 {
     grid-area: c6;
     padding: 1rem;
     border: 1px solid black;
+    border-left: 0.75rem solid var(--secondary-color);
     border-radius: 10px;
+    gap: 0.2rem;
+    background-color: var(--content-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text-heading {
+    font-weight: bold;
+    columns: var(--black-color);
+}
+
+.card-text-content {
+    flex-grow: 1;
+    
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.card-icons > svg {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 
@@ -294,10 +367,9 @@ body {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid pink;
     border-radius: 10px;
 
-    background-color: white;
+    background-color: var(--content-color);
     align-items: center;
 }
 
@@ -307,7 +379,7 @@ body {
 
     border: none;
     border-radius: 5rem;
-    background-color: rgb(199, 199, 199);
+    background-color: var(--hr-color);
 }
 
 .announcement-1,
@@ -315,7 +387,7 @@ body {
 .announcement-3 {
     width: 80%;
     font-size: 0.7rem;
-    color: rgb(77, 76, 76);
+    color: var(--text-color);
 }
 
 
@@ -324,7 +396,7 @@ body {
 .announcement-3 > .announcement-heading{
     font-size: 0.9rem; 
     font-weight: bolder;
-    color: black;
+    color: var(--black-color);
 }
 
 
@@ -341,8 +413,8 @@ body {
     flex-direction: column;
     gap: 1rem;
 
-    border: 1px solid pink;
     border-radius: 10px;
+    background-color: var(--content-color);
     
     font-size: 0.8rem;
 }
@@ -360,7 +432,6 @@ body {
     height: 2.5rem;
     width: 2.5rem;
 
-    border: 1px solid black;
     border-radius: 10rem;
 }
 
@@ -369,5 +440,5 @@ body {
 }
 
 .trending-account-info > .trending-account-bio {
-    color: rgb(77, 76, 76);
+    color: var(--text-color);
 }
