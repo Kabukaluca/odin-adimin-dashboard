@@ -125,37 +125,6 @@ body {
     transform: scale(1.05);
 }
 
-/* .header-bottom {
-    padding: 0 2rem 0 2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} 
-
-.welcome {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.welcome-img-placeholder {
-    height: 4.5rem;
-    width: 4.5rem;
-
-    border-radius: 10rem;
-    cursor: pointer;
-}   
-
-.welcome-message {
-    font-size: 1rem;
-}
-
-.welcome-message > .welcome-username {
-    font-size: 1.4rem;
-    font-weight: bold;
-} */
-
 .header-buttons {
     grid-area: buttons;
     justify-self: center;
@@ -335,7 +304,6 @@ body {
 .project-cards-container::-webkit-scrollbar-track {
     background: transparent;
 }
-
 
 .project-cards {
     padding: 1rem;
