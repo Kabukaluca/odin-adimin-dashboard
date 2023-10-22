@@ -1,16 +1,16 @@
 :root {
     /* ===== Colors ===== */
-    --body-color: #e5e7eb; 
+    --body-color: #e2e8f0; 
     --content-color: #f9fafb;
-    --sidebar-color: #262626;
+    --sidebar-color: #0f172a;
     --header-color: #f9fafb;
     --primary-color: #3b82f6;
     --secondary-color: #10b981;
-    --text-color: #6b7280;
+    --text-color: #64748b;
     --hr-color: #d1d5db;
 
     --white-color: white;
-    --black-color: #030712;
+    --black-color: #020617;
 }
 
 body {
@@ -293,7 +293,7 @@ body {
 .content-heading-projects {
     margin: 0;
     padding: 1rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
 
     font-size: 1.1rem;
     font-weight: bold;
@@ -302,7 +302,7 @@ body {
 .content-heading-announcements {
     margin: 0;
     padding-top: 1rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
 
     font-size: 1.1rem;
     font-weight: bold;
@@ -318,11 +318,28 @@ body {
 
 .projects {
     grid-area: projects;
+    border-radius: 1rem;
 }
 
+.project-cards-container {
+    overflow: scroll;
+    max-height: 75vh;
+}
+ /*----- Hide Project-Scrollbar -----*/
+.project-cards-container::-webkit-scrollbar {
+    width: 0;
+}
+.project-cards-container::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+.project-cards-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
 .project-cards {
-    height: 80%;
     padding: 1rem;
+    padding-top: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -336,18 +353,17 @@ body {
 .projects-c1 {
     grid-area: c1;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--content-color);
     gap: 0.2rem;
 
     display: flex;
     flex-direction: column;
+    min-height: 10rem;
 }
 .projects-c2 {
     grid-area: c2;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--content-color);
     gap: 0.2rem;
@@ -358,7 +374,6 @@ body {
 .projects-c3 {
     grid-area: c3;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--content-color);
     gap: 0.2rem;
@@ -369,7 +384,6 @@ body {
 .projects-c4 {
     grid-area: c4;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--content-color);
     gap: 0.2rem;
@@ -380,7 +394,6 @@ body {
 .projects-c5 {
     grid-area: c5;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--content-color);
     gap: 0.2rem;
@@ -391,13 +404,18 @@ body {
 .projects-c6 {
     grid-area: c6;
     padding: 1rem;
-    border-left: 0.75rem solid var(--primary-color);
     border-radius: 10px;
     gap: 0.2rem;
     background-color: var(--content-color);
 
     display: flex;
     flex-direction: column;
+}
+.card-preview-img {
+    height: 5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 .card-text-heading {
@@ -419,8 +437,8 @@ body {
 }
 
 .card-icons > svg {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -435,7 +453,6 @@ body {
 }
 
 .announcement-content {
-    margin-top: 1rem;
     margin-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -526,8 +543,9 @@ body {
     height: 2.5rem;
     width: 2.5rem;
 
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--black-color);
     border-radius: 10rem;
+    object-fit: cover;
 }
 
 .trending-account-info > .trending-account-name {
